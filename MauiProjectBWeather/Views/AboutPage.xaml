@@ -5,7 +5,7 @@
              Title="About Weather">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="MediumPurple" Padding="24" CornerRadius="0">
             <Label Text="Project Part B" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Weather in Maui" FontSize="Title" Padding="30,10,30,10"/>
@@ -16,7 +16,7 @@
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="Created by Your Name"/>
+                        <Span Text="Created by Sofie Thorsager"/>
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>

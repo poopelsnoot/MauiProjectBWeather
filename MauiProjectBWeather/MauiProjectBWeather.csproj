@@ -66,6 +66,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bangkok.jpg" />
+	  <None Remove="Resources\Images\bombay.jpg" />
+	  <None Remove="Resources\Images\buenosaires.jpg" />
+	  <None Remove="Resources\Images\canberra.jpg" />
+	  <None Remove="Resources\Images\capetown.jpg" />
+	  <None Remove="Resources\Images\losangeles.jpg" />
+	  <None Remove="Resources\Images\newyork.jpg" />
+	  <None Remove="Resources\Images\saopaulo.jpg" />
+	  <None Remove="Resources\Images\stockholm.jpg" />
+	  <None Remove="Resources\Images\sydney.jpg" />
+	  <None Remove="Resources\Images\tunis.jpg" />
+	  <None Remove="Resources\Images\uppsala.jpg" />
+	  <None Remove="Resources\Images\weather.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />

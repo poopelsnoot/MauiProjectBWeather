@@ -16,7 +16,7 @@ namespace MauiProjectBWeather.Services
         HttpClient httpClient = new HttpClient();
         
         //Your API Key
-        readonly string apiKey = "";
+        readonly string apiKey = "1da5e245154c235707786bf7531a8b25";
 
         public async Task<Forecast> GetForecastAsync(string City)
         {

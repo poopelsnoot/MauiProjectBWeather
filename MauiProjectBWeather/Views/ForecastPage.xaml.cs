@@ -7,6 +7,7 @@ using System.Windows.Input;
 
 using MauiProjectBWeather.Models;
 using MauiProjectBWeather.Services;
+using Microsoft.Maui.Graphics.Text;
 
 namespace MauiProjectBWeather.Views
 {
@@ -49,6 +50,9 @@ namespace MauiProjectBWeather.Views
 
             //Here Group your forecast and bind it to your
             //ListView ItemSource
+            var groupDate = forecast.Items.GroupBy(f => f.DateTime.Date, forecastItem => forecastItem);
+            GroupedForecast.ItemsSource = groupDate;
+            image.Source = city.ImageSrc;
         }
     }
 }

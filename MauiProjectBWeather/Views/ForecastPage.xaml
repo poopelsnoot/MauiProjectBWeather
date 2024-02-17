@@ -3,22 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiProjectBWeather.Views.ForecastPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Refresh" Clicked="Button_Clicked" />
-
-            <!-- Your XAML code to present the weather data in a ListView-->
-            <!-- 
-            <ListView x:Name="GroupedForecast" IsGroupingEnabled="true" HasUnevenRows="true">
-                <ListView.GroupHeaderTemplate>
-                    <DataTemplate>
-                    </DataTemplate>
-                </ListView.GroupHeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            -->
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Image x:Name="image" Source="weather.jpg" HeightRequest="200"/>
+                <Button Text="Refresh" Clicked="Button_Clicked" BackgroundColor="MediumPurple"/>
+                <!-- Your XAML code to present the weather data in a ListView-->
+                <ListView x:Name="GroupedForecast" IsGroupingEnabled="true" HasUnevenRows="true">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="40" Padding="5" Orientation="Horizontal">
+                                    <Label FontSize="20" TextColor="MediumPurple" VerticalOptions="Center" Text="{Binding Key, StringFormat='den {0:dd} / {0:MM} - {0:yyyy}'}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout>
+                                    <VerticalStackLayout Padding="5,10,5,15">
+                                        <Image Source="{Binding Icon}"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout>
+                                        <Label FontSize="12"
+                                   Text="{Binding DateTime, StringFormat='{0:HH:mm}'}"/>
+                                        <Label FontSize="15" FontAttributes="Bold" 
+                                   Text="{Binding Description}"/>
+                                        <HorizontalStackLayout>
+                                            <Label FontSize="15" 
+                                       Text="{Binding Temperature, StringFormat='Temperature: {0:N1} deg C,'}"/>
+                                            <Label FontSize="15" 
+                                       Text="{Binding WindSpeed, StringFormat=' Windspeed: {0:N1} m/s'}"/>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
